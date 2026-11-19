@@ -4,10 +4,48 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Générateur de mots de passe · EDEN School</title>
-  <!-- Étape CSS : relie style.css ici. -->
+  <link rel="stylesheet" href="style.css">
   <!-- Étape JavaScript : charge assets/hasard.js puis script.js ici avec defer. -->
 </head>
 <body>
-  <!-- Étape HTML : construis ta carte ici. -->
+  <div class="carte">
+    <div class="boite-haut">
+      <div class="boite-mdp-text">
+      </div>
+      <div class="logo">
+      <img src="assets/cle.svg" width="105px" />
+      </div>
+    </div>
+    <div>
+      <div class="boite-bas">
+        <input id="mot-de-passe" name="mot-de-passe" class="mdp" type="texte" placeholder=" En attente du clic">
+        <button id="generer-un-mot-de-passe"> Generer un mot de passe</button>
+      </div>
+    </div>
+  </div>
 </body>
+
+<script>
+  function generatePassword() {
+            var password = "";
+            var possible =
+                "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&()*+,-./:;<=>?@[]^_`{|}~";
+            for (var i = 0; i < 15; i++) {
+                password += possible.charAt(
+                    Math.floor(Math.random() * possible.length),
+                );
+            }
+            return password;
+        }
+  const button = document.getElementById("generer-un-mot-de-passe");
+  const input = document.getElementById("mot-de-passe");
+  console.log(input);
+  button.addEventListener("click", () => {
+      console.log("Bravo t'as été clické");
+      input.style.backgroundColor = "white";
+      input.value =generatePassword()
+  });
+
+</script>
+
 </html>

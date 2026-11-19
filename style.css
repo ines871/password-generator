@@ -5,4 +5,48 @@
   font-display: swap;
 }
 
-/* Étape CSS : écris ici les règles de la carte et de ses éléments. */
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.carte{
+  background-color: rgb(252, 244, 244);
+  width: 960px;
+  height: 640px;
+  border: 2px solid black;
+  box-shadow: 6px 6px 0px black;
+  border-radius: 13px;
+
+}
+
+.boite-haut {
+  background-color: rgb(6, 241, 230);
+  height: 193px;
+  display: flex;
+  flex-direction: row;
+}
+
+.boite-mdp-text{
+  background-color: rgb(6, 241, 230);
+  width: 320px;
+  height: 128px;
+}
+
+.logo {
+  margin-left: 496px;
+}
+
+.boite-bas {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.mdp {
+  width: 85%;
+  height: 50px;
+}
